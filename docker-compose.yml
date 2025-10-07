@@ -1,0 +1,12 @@
+
+version: '3.8'
+services:
+  bot:
+    build: .
+    environment:
+      - BINANCE_TESTNET_KEY=${BINANCE_TESTNET_KEY}
+      - BINANCE_TESTNET_SECRET=${BINANCE_TESTNET_SECRET}
+      - SYMBOL=${SYMBOL}
+      - QUANTITY=${QUANTITY}
+    volumes:
+      - ./:/app
